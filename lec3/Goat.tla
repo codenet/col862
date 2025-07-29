@@ -12,11 +12,12 @@ Danger == {{G, C}, {G, W}, {G, W, C}}
 TypeOK == /\ boat \in Boat
           /\ left \in SUBSET {F, C, G, W}
           /\ right \in SUBSET {F, C, G, W}
-          /\ left \cap right = {}
-          /\ left \cap boat = {}
-          /\ right \cap boat = {}
-          /\ left \notin Danger
-          /\ right \notin Danger
+
+Sane == /\ left \cap right = {}
+        /\ left \cap boat = {}
+        /\ right \cap boat = {}
+        /\ left \notin Danger
+        /\ right \notin Danger
 
 NotSolved == right # {F, C, G, W}
 
