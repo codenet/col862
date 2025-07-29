@@ -1,1 +1,3 @@
+* Watch Leslie's lectures 1-4 on TLA+ first.
+* Then read and execute `Goat.tla`.
 * You can also learn how to visualize specifications [here](https://github.com/will62794/spectacle/blob/master/specs/CabbageGoatWolf.tla)
