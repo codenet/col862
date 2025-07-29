@@ -1,5 +1,4 @@
 ------------------------- MODULE Goat -----------------------------
-EXTENDS Naturals, FiniteSets
 VARIABLES left, boat, right
 
 C == "Cabbage"
