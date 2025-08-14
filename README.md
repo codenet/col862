@@ -9,3 +9,4 @@ Lectures
 7. [Chain Replication](https://www.usenix.org/legacy/publications/library/proceedings/osdi04/tech/full_papers/renesse/renesse.pdf). Replicated state machines. Write TLA+ specs for a single server key-value store and a chain replicated key-value store. 
 8. [Leslie's lectures 8(a,b).](https://lamport.azurewebsites.net/video/videos.html)
 9. TLA+ specification is just a temporal formula that accepts certain behaviors. State formulas, invariants, action formulas, box action formulas. Induction for proving invariants. Prove TCSpec from transaction commit has TCTypeOk invariant.
+10. Stuttering. Prove that two-phase commit implements transaction commit. Eventually. TLA inference and equivalence rules.
