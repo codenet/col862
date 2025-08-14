@@ -1,7 +1,7 @@
 ------------------------------- MODULE TCProofs ------------------------------
 EXTENDS TLAPS
 CONSTANT RM
-VARIABLES rmState, tmState, tmPrepared, msgs
+VARIABLES rmState
 
 TC == INSTANCE TCommit
 Inv == TC!TCTypeOK /\ TC!TCConsistent
