@@ -10,3 +10,6 @@ Lectures
 8. [Leslie's lectures 8(a,b).](https://lamport.azurewebsites.net/video/videos.html)
 9. TLA+ specification is just a temporal formula that accepts certain behaviors. State formulas, invariants, action formulas, box action formulas. Induction for proving invariants. Prove TCSpec from transaction commit has TCTypeOk invariant.
 10. Stuttering. Prove that two-phase commit implements transaction commit. Eventually. TLA inference and equivalence rules.
+11. [Leslie's lectures 9(a, b).](https://lamport.azurewebsites.net/video/videos.html)
+12. Liveness, weak and strong fairness. 
+13. How TLC checks for liveness? Proof lattices for proving liveness. <br/> Recommended reading: [(TOPLAS 1982) Proving Liveness Properties of Concurrent Programs](https://dl.acm.org/doi/10.1145/357172.357178)
