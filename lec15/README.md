@@ -11,22 +11,23 @@ key-value store (as a replicated state machine), acceptors want to choose the
 next "client request" to service. Regardless of acceptor failures, leader
 failures, lost messages, delayed messages, duplicate messages, and clock skews,
 everyone *must* agree on a single chosen value. The algorithm can tolerate `F`
-acceptor faults. If `F+1` replicas are eventually alive, the algorithm might
+acceptor faults. If `F+1` acceptors are eventually alive, the algorithm might
 eventually choose a value. The algorithm may never choose a value (in line with
 the FLP impossibility theorem).
 
-The heart of the algorithm is the theorem `ShowsSafety` in `Voting.tla`. The
-theorem basically ensures that *leaders can only propose **safe values***.  A value is
-safe if it is the one that was chosen (quorum of acceptors chose this value in a
-previous ballot); or any other value if there was no consensus yet (quorum of
-acceptors never voted and never will vote on the same value in any previous
-ballot).  Before trying to understand this theorem, build intuitions for it from
-the scenarios given in Section 6.4 of the paper.
+The heart of the algorithm is the theorem `ShowsSafety` in
+[Voting.tla](./Voting.tla). The theorem basically ensures that *leaders can only
+propose **safe values***.  A value is safe if it is the one that was chosen
+(quorum of acceptors chose this value in a previous ballot); or any other value
+if there was no consensus yet (quorum of acceptors never voted and never will
+vote on the same value in any previous ballot).  Before trying to understand
+this theorem, build intuitions for it from the scenarios given in Section 6.4 of
+the paper.
 
-We try to explain this theorem informally in english. The theorem ensures that
-the leader of ballot `b` will only propose a value `v` if `ShowsSafeAt(Q, b, v)`
-holds for any quorum `Q`. Say `c` is the last ballot where *anyone* in the
-quorum `Q` had voted. 
+Here, we try to explain this theorem informally in english. The theorem ensures
+that the leader of ballot `b` will only propose a value `v` if `ShowsSafeAt(Q,
+b, v)` holds for any quorum `Q`. Say `c` is the last ballot where *anyone* in
+the quorum `Q` had voted. 
 
 Case 1: If no one in the quorum has ever voted (`c=-1`), we are sure that there
 *cannot* be a chosen value (all quorums have at least one common acceptor with
@@ -40,7 +41,7 @@ could have been for the value `v`. Hence, it is safe to propose `v`.
 
 Could there be a quorum at some ballot number, say `d`, which is greater than
 `c` and less than `b`? No! We know that `c` was the *last ballot* for which
-anyone in the quorum `Q` had voted. Hence, in the ballot `d`, we could not have
+*anyone* in the quorum `Q` had voted. Hence, in the ballot `d`, we could not have
 established a quorum (all quorums have at least one common acceptor with `Q`).
 
 Could acceptors have voted for `v` in ballot `c`, but a quorum was reached for
