@@ -1,0 +1,1 @@
+../lec07/MCCR.tla
