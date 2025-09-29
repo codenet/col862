@@ -1,1 +1,2 @@
-
+- Raft TLA+ specification is present at https://github.com/ongardie/raft.tla/blob/master/raft.tla
+- Diego Ongaro's PhD thesis on Raft is available at https://web.stanford.edu/~ouster/cgi-bin/papers/OngaroPhD.pdf
