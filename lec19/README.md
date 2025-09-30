@@ -1,0 +1,6 @@
+- Raft visualization tool and links to various implementations are present at https://raft.github.io/
+- Raft TLA+ specification is present at https://github.com/ongardie/raft.tla/blob/master/raft.tla
+- Diego Ongaro's PhD thesis on Raft is available at https://web.stanford.edu/~ouster/cgi-bin/papers/OngaroPhD.pdf
+- Diego Ongaro's talk at LinkedIn: http://youtube.com/watch?v=LAqyTyNUYSY
+- John Ousterhout's talk as part of the CS @ Illinois Distinguished Lecture Series: https://www.youtube.com/watch?v=vYp4LYbnnW8
+- Raft Lecture at MIT: https://www.youtube.com/watch?v=64Zp3tzNbpE 
